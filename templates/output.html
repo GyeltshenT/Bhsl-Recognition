@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output Page</title>
+    <style>
+        body {
+            background-color: #fff8e1;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px; /* Ensures distance from the screen edges */
+            box-sizing: border-box; /* Ensures padding is included in the total width and height */
+        }
+        .container {
+            max-width: 500px;
+            width: 100%; /* Ensures responsiveness */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        p {
+            color: #ff6f00;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    {% if value == 0 %}
+        <img src="{{ url_for('static', filename='assets/cha.avif') }}" alt="Character cha">
+    {% elif value == 1 %}
+        <img src="{{ url_for('static', filename='assets/chha.avif') }}" alt="Character chha">
+    {% elif value == 2 %}
+        <img src="{{ url_for('static', filename='assets/ga.avif') }}" alt="Character ga">
+    {% elif value == 3 %}
+        <img src="{{ url_for('static', filename='assets/ja.avif') }}" alt="Character ja">
+    {% elif value == 4 %}
+        <img src="{{ url_for('static', filename='assets/ka.avif') }}" alt="Character ka">
+    {% elif value == 5 %}
+        <img src="{{ url_for('static', filename='assets/kha.avif') }}" alt="Character kha">
+    {% elif value == 6 %}
+        <img src="{{ url_for('static', filename='assets/nga.avif') }}" alt="Character nga">
+    {% elif value == 7 %}
+        <img src="{{ url_for('static', filename='assets/nya.avif') }}" alt="Character nya">
+    {% else %}
+        <p>Not Recognized</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
